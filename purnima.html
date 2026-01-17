@@ -1,0 +1,189 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, Purnima! 🎉</title>
+  <meta name="description" content="A retro, floral birthday wish for Purnima with cats, an Ola scooter, roses, bells, and glitter." />
+
+  <!-- Google Fonts (works when online) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Righteous&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient layers -->
+  <div id="petal-layer" aria-hidden="true"></div>
+  <div id="sparkle-layer" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div class="hero-frame" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <!-- Stickers (cats & scooter) -->
+      <div class="stickers" aria-hidden="true">
+        <!-- Cat 1 -->
+        <svg class="sticker cat1" width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g>
+            <circle cx="48" cy="48" r="38" fill="#FFEBD9" stroke="#3A2C27" stroke-width="3"/>
+            <path d="M24 32 L34 18 L40 34" fill="#FFEBD9" stroke="#3A2C27" stroke-width="3"/>
+            <path d="M72 32 L62 18 L56 34" fill="#FFEBD9" stroke="#3A2C27" stroke-width="3"/>
+            <circle cx="38" cy="46" r="4" fill="#3A2C27"/>
+            <circle cx="58" cy="46" r="4" fill="#3A2C27"/>
+            <path d="M44 58 Q48 62 52 58" stroke="#3A2C27" stroke-width="3" fill="none"/>
+            <path d="M36 52 Q48 52 60 52" stroke="#F4A300" stroke-width="3"/>
+          </g>
+        </svg>
+
+        <!-- Cat 2 -->
+        <svg class="sticker cat2" width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="10" y="26" width="90" height="70" rx="20" fill="#FFF6E8" stroke="#3A2C27" stroke-width="3"/>
+          <circle cx="40" cy="60" r="8" fill="#3A2C27"/>
+          <circle cx="70" cy="60" r="8" fill="#3A2C27"/>
+          <path d="M48 74 Q55 78 62 74" stroke="#3A2C27" stroke-width="3" fill="none"/>
+          <path d="M20 46 L34 30 L36 50" fill="#FFF6E8" stroke="#3A2C27" stroke-width="3"/>
+          <path d="M90 46 L76 30 L74 50" fill="#FFF6E8" stroke="#3A2C27" stroke-width="3"/>
+        </svg>
+
+        <!-- Ola scooter -->
+        <svg class="sticker scooter" width="180" height="130" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ola scooter">
+          <g stroke="#1e1e1e" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="85" cy="170" r="34" fill="#e8f6f2"/>
+            <circle cx="220" cy="170" r="34" fill="#e8f6f2"/>
+            <path d="M50 170 H120 C150 120 210 118 250 140"/>
+            <path d="M170 90 Q190 70 210 70 C235 70 245 90 250 120"/>
+            <path d="M170 90 L160 130"/>
+            <rect x="145" y="120" width="36" height="30" rx="6" fill="#0E4A5B"/>
+            <path d="M210 70 C220 60 235 58 248 62"/>
+          </g>
+          <text x="140" y="210" font-family="Nunito, Arial" font-size="20" fill="#0E4A5B">Ola</text>
+        </svg>
+      </div>
+
+      <!-- Retro ribbon heading -->
+      <div class="ribbon">
+        <h1 class="heading">Happy Birthday, Purnima!</h1>
+      </div>
+      <p class="subhead">
+        Roses, bells, and a sprinkle of glitter—may your day feel like a classic melody with cozy cat cuddles and joyful rides. ✨
+      </p>
+
+      <div class="cta-row">
+        <button class="cta" id="playBtn" aria-controls="music" aria-label="Play your birthday song">
+          <span aria-hidden="true">▶</span> Play Your Birthday Song
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- Floral divider -->
+    <div class="divider" aria-hidden="true"><span>🌹 🌸 🔔 ✨ 🌸 🌹</span></div>
+
+    <!-- Memory Reel (USING YOUR FILENAMES from assets/) -->
+    <section class="section" aria-labelledby="memories-title">
+      <div class="section-inner">
+        <h2 id="memories-title" class="section-title bell-title"><span class="bell">🔔</span> Memory Reel <span class="bell">🔔</span></h2>
+
+        <div class="gallery" role="list">
+          <!-- Update captions if you like; keep the paths pointing to your actual files -->
+          <article class="polaroid" role="listitem" style="--rot:-2deg">
+            <img src="assets/Media (1).png" alt="Purnima smiling" />
+            <p>Your brightest smile</p>
+          </article>
+
+          <article class="polaroid" role="listitem" style="--rot:2deg">
+            <img src="assets/Media (2).png" alt="Cozy moment with a cat" />
+            <p>Cozy cat moments</p>
+          </article>
+
+          <article class="polaroid" role="listitem" style="--rot:-1deg">
+            <img src="assets/Media.jpg" alt="Joyful ride on a scooter" />
+            <p>Joyful rides ahead</p>
+          </article>
+
+          <article class="polaroid" role="listitem" style="--rot:1deg">
+            <img src="assets/Media.png" alt="Laughing together" />
+            <p>Timeless laughs</p>
+          </article>
+
+          <!-- If you add more photos, copy a card and change the src/caption -->
+          <!--
+          <article class="polaroid" role="listitem" style="--rot:-3deg">
+            <img src="assets/another-photo.jpg" alt="Sunset memories" />
+            <p>Sunset memories</p>
+          </article>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Wish -->
+    <section class="section" aria-labelledby="wish-title">
+      <div class="section-inner">
+        <h2 id="wish-title" class="section-title">A Wish From the Heart</h2>
+        <div class="wish rose-outline">
+          <div class="radio-icon" aria-hidden="true"></div>
+          <div>
+            <p class="dear">Dear Purnima,</p>
+            <p>May your year bloom with love and laughter—soft as petals, bright as bells, and shimmering like stardust.</p>
+            <p class="love">With love, Aman.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ride Ahead -->
+    <section class="section ride" aria-labelledby="ride-title">
+      <div class="section-inner ride-wrap">
+        <div>
+          <h2 id="ride-title" class="section-title">The Ride Ahead</h2>
+          <p>Here’s to smooth rides, new places, and countless happy pit stops. May every turn bring a new reason to smile. 🛵✨</p>
+        </div>
+        <div aria-hidden="true" class="ride-art">
+          <svg width="300" height="200" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#1e1e1e" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="85" cy="170" r="34" fill="#e8f6f2"/>
+              <circle cx="220" cy="170" r="34" fill="#e8f6f2"/>
+              <path d="M50 170 H120 C150 120 210 118 250 140"/>
+              <path d="M170 90 Q190 70 210 70 C235 70 245 90 250 120"/>
+              <path d="M170 90 L160 130"/>
+              <rect x="145" y="120" width="36" height="30" rx="6" fill="#0E4A5B"/>
+              <path d="M210 70 C220 60 235 58 248 62"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Old Song Vibes (YouTube) -->
+    <section id="music" class="section" aria-labelledby="music-title">
+      <div class="section-inner">
+        <h2 id="music-title" class="section-title bell-title"><span class="bell">🔔</span> Old Song Vibes <span class="bell">🔔</span></h2>
+        <div class="tape rose-outline" role="group" aria-label="Music player">
+          <div class="reel left" aria-hidden="true"></div>
+          <div class="reel right" aria-hidden="true"></div>
+          <div class="player">
+            <!-- Single-video embed for "Keh Doon Tumhe" by Kishore Kumar -->
+            <iframe id="ytPlayer" title="Keh Doon Tumhe - YouTube"
+              src="https://www.youtube.com/embed/0QlQo5erDJE?autoplay=0&enablejsapi=1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="player-note">Click the button above for confetti and a gentle scroll here. Some browsers may need one tap on the player to start audio.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with love for <strong>Purnima</strong> · 17 January</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
